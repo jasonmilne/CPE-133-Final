@@ -1,0 +1,24 @@
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto a8eb37c7800049e6aeacdcd27d906000 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab08Sim_behav xil_defaultlib.Lab08Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'CLR' [C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Lab08.sv:39]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'valid' [C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Lab08.sv:41]
+WARNING: [VRFC 10-5021] port 'cnt2' is not connected on this instance [C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Lab08.sv:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Multiply_FSM
+Compiling module xil_defaultlib.ShiftRegister
+Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.cnt_convert_14b
+Compiling module xil_defaultlib.cnt_convert_7b
+Compiling module xil_defaultlib.clk_divder
+Compiling module xil_defaultlib.univ_sseg
+Compiling module xil_defaultlib.Lab08
+Compiling module xil_defaultlib.Lab08Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab08Sim_behav

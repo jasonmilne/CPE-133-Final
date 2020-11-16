@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../CPE133Labs.srcs/sources_1/new/FA.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/HA.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/Mux.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/RCA1.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/SevenSeg.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/Lab04.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

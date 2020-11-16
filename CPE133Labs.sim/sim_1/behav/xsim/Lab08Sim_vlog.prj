@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../Week 10/Accumulator.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/Lab08.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/Multiply_FSM.sv" \
+"../../../../../../Week 10/ShiftRegister.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/univ_sseg.sv" \
+"../../../../CPE133Labs.srcs/sim_1/new/Lab08Sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
