@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Mux( //#(parameter WIDTH=3)(
-    input[3:0] A,
-    input [3:0]B,
+module Mux #(parameter WIDTH = 3)(
+    input[WIDTH:0] A,
+    input [WIDTH:0]B,
     input sel,
-    output logic[3:0] out 
+    output logic[WIDTH:0] out 
     );
     always_comb
     begin
