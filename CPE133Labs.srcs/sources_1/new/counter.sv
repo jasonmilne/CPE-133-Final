@@ -31,7 +31,7 @@ module counter(
     
 always@(posedge clk) 
     begin
-    RCA1(.A(4'b0001), .B(oldNum), .sub(0), .S(newNum)); //this has a ripple carry adder that just adds 1 each time the clock goes up
+    RCA1 RCA1(.A(4'b0001), .B(oldNum), .sub(0), .S(newNum)); //this has a ripple carry adder that just adds 1 each time the clock goes up
     oldNum = newNum;//this resets the process so that it keeps ticking up, once it hits F it just rests back to 0
  
  end

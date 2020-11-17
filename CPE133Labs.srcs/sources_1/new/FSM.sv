@@ -20,14 +20,23 @@ module fsm_template(
     //again the size should be log2(number of states)
     parameter [2:0] START = 3'b000; //, ST1 = 2'b01, ST2= 2'b10; //these were defined above
     logic [2:0] NS;
-    logic [2:0] PS = START;
-    logic [2:0] a = 4'b000;
-    logic [2:0] b = 4'b001;
-    logic [2:0] c = 4'b010;
-    logic [2:0] d = 4'b011;
-    logic [2:0] e = 4'b100;
-    logic [2:0] f = 3'b101;
-    logic [2:0] g = 3'b110;
+    logic [3:0] PS = START;
+    logic [3:0] a = 4'b0000;
+    logic [3:0] b = 4'b0001;
+    logic [3:0] c = 4'b0010;
+    logic [3:0] d = 4'b0011;
+    logic [3:0] e = 4'b0100;
+    logic [3:0] f = 4'b0101;
+    logic [3:0] g = 4'b0110;
+    logic [3:0] h = 4'b0111;
+    logic [3:0] i = 4'b1000;
+    logic [3:0] j = 4'b1001;
+    logic [3:0] k = 4'b1010;
+    logic [3:0] l = 4'b1011;
+    logic [3:0] m = 4'b1100;
+    logic [3:0] n = 4'b1101;
+    logic [3:0] o = 4'b1110;
+    logic [3:0] p = 4'b1111;
     
     
 
@@ -54,7 +63,7 @@ module fsm_template(
             begin
                 mealy = 0; //mealy outputs depend on the input and state
                 NS = b;
-            end
+                 end
             else
             begin // x == 1
                 NS = a;

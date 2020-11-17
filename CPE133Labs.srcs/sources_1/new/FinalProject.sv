@@ -31,7 +31,13 @@ module FinalProject(
     logic [15:0] randumNumberDecimal;//this is from the random number generator but has been translated from the table
     
     counter RngCounter(.clk(clk), .start(reset), .RandNum(randNum)); //This is the Random Number Generator that generates a number that is used to decide which test case is used. It uses a ripple carry adder to do the math and it just keeps looping
-    FSM FSM_Check(.switches(switches), .check(check), .R_Num(randNum), .cc(cc)); //This is the FSM that checks if the switches are the same as the Hex number that is displayed
+   //below is for testing
+    Big_FSM Big_FSM(.switches(switches), .check(check) , .randNum(randNum), .cc(cc));
+   
+   
+   
+   
+    //FSM Final_FSM(.switches(switches), .check(check), .R_Num(randNum), .clk(clk), .cc(cc)); //This is the FSM that checks if the switches are the same as the Hex number that is displayed
     BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ccseg), .DISP_EN(ccan)); //This is the seven segement display generator to display if Crap or Cool is displayed
     hexSevSeg HexSseg(.clk(clk), .switch(randumNumberDecimal), .anode(hexan), .cathode(hexsseg));// This is a seven segemnt display module that was taken and modified from a Youtube tutorial
     Mux #(15) ssegMux(.A(ccseg), .B(hexsseg), .sel(check), .out(sseg)); //this is a mux to decide which sseg to display
