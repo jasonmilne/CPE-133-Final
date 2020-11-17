@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.runs/synth_1/Lab08.tcl"
+  variable script "C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.runs/synth_1/FinalProject.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/bothe/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1852-thicc-lad/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -84,16 +80,26 @@ set_property webtalk.parent_dir {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE
 set_property parent.project_path {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths {{c:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs}} [current_project]
+update_ip_catalog
 set_property ip_output_repo {c:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Week 10/Accumulator.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Multiply_FSM.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Week 10/ShiftRegister.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/univ_sseg.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Lab08.sv}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Mux.sv}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/counter.sv}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FinalProject.sv}
+}
+read_verilog -library xil_defaultlib {
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/BCD_to_cathodes.v}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/anode_control.v}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/hexSevSeg.v}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/refreshcounter.v}
+}
+read_vhdl -library xil_defaultlib {
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Week 8/Wend lab/given files/bc_dec.vhd}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Week 8/Wend lab/given files/clock_div2.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,17 +117,17 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Lab08 -part xc7a35tcpg236-1
+synth_design -top FinalProject -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Lab08.dcp
+write_checkpoint -force -noxdef FinalProject.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Lab08_utilization_synth.rpt -pb Lab08_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file FinalProject_utilization_synth.rpt -pb FinalProject_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
