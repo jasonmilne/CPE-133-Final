@@ -31,13 +31,13 @@ module Mux #(parameter WIDTH = 3)(
     
     if(sel == 0 && A == 2)
         begin
-         //   out = A;
-            FSM_Case_0 FSM_case_0(.switches(A), .power(1), .cc(sel));
+            out = A;
+         //   FSM_Case_0 FSM_case_0(.switches(A), .power(1), .cc(sel));
         end
     else if (sel == 1 && A == 3) //if(sel == 1)
         begin
-        //    out = B;
-            FSM_Case_1 FSM_case_1(.switches(A), .power(1), .cc(sel));
+            out = B;
+           // FSM_Case_1 FSM_case_1(.switches(A), .power(1), .cc(sel));
 
             
             

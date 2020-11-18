@@ -10,85 +10,69 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Big_FSM( 
+module Big_FSM( //I think that this is not needed
     input [15:0]switches, //This is the raw switches input
     input logic check,    //this is the button for checking
     input logic [3:0]randNum,  //This is the randum number that is being compared int the table
-    output cc       //This is the final output that is going to say "crap" or "cool"
+    output [3:0]power,
+    output cc,       //This is the final output that is going to say "crap" or "cool"
+    output logic power0,  //powers on  FSM 0
+    output logic power1,  //powers on FSM 1
+    output logic power2,  //powers on FSM 2
+    output logic power3,  //powers on FSM 3
+    output logic power4,  //powers on FSM 4
+    output logic power5,  //powers on FSM 5
+    output logic power6,  //powers on FSM 6
+    output logic power7,  //powers on FSM 7
+    output logic power8,  //powers on FSM 8
+    output logic power9,  //powers on FSM 9
+    output logic power10, //powers on FSM 10
+    output logic power11, //powers on FSM 11
+    output logic power12, //powers on FSM 12
+    output logic power13, //powers on FSM 13
+    output logic power14, //powers on FSM 14
+    output logic power15  //powers on FSM 15
     );
-    
-    logic WhyIsThisNeeded = 0;
-always_comb
-begin
-    //have to use this if format to keep System Veralog Happy
-    if(check == 1 && randNum == 4'b0000) // case 0
-        begin
-           FSM_Case_0 FSM_Case_0(.switches(switeches), .power(1), .cc(cc));
-        end
-    else //if (check == 1 && randNum == 4'b0001) //case 1
-        begin
-            FSM_Case_1 FSM_Case_1(.switches(switeches), .power(1), .cc(cc));
-        end 
-//    else if (check == 1 && randNum == 2) //case 2
-//        begin
-//            FSM_Case_2 FSM_Case_2(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 3) //case 3
-//        begin
-//            FSM_Case_3 FSM_Case_3(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 4) //case 4
-//        begin
-//            FSM_Case_4 FSM_Case_4(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 5) //case 5
-//        begin
-//            FSM_Case_1 FSM_Case_5(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//        else if (check == 1 && randNum == 6) //case 6
-//        begin
-//            FSM_Case_6 FSM_Case_6(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 7) //case 7
-//        begin
-//            FSM_Case_7 FSM_Case_7(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 8) //case 8
-//        begin
-//            FSM_Case_8 FSM_Case_8(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 9) //case 9
-//        begin
-//            FSM_Case_9 FSM_Case_9(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 10) //case 10
-//        begin
-//            FSM_Case_10 FSM_Case_10(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 11) //case 11
-//        begin
-//            FSM_Case_11 FSM_Case_11(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 12) //case 12
-//        begin
-//            FSM_Case_12 FSM_Case_12(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 13) //case 13
-//        begin
-//            FSM_Case_13 FSM_Case_13(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 14) //case 14
-//        begin
-//            FSM_Case_14 FSM_Case_14(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else if (check == 1 && randNum == 15) //case 15
-//        begin
-//            FSM_Case_15 FSM_Case_15(.switches(switeches), .power(1), .cc(cc));
-//        end 
-//    else
-//    begin
-//        //do nothing
-//    end
+    always_comb
+    begin
+    case(randNum)
+       0: power0   = 0; //power on FSM0
+       1: power1   = 1; //power on FSM1
+       2: power2   = 1; //power on FSM2
+       3: power3   = 1; //power on FSM3
+       4: power4   = 1; //power on FSM4
+       5: power5   = 1; //power on FSM5
+       6: power6   = 1; //power on FSM6
+       7: power7   = 1; //power on FSM7
+       8: power8   = 1; //power on FSM8
+       9: power9   = 1; //power on FSM9
+       10: power10 = 1; //power on FSM10
+       11: power11 = 1; //power on FSM11
+       12: power12 = 1; //power on FSM12
+       13: power13 = 1; //power on FSM13
+       14: power14 = 1; //power on FSM14
+       15: power15 = 1; //power on FSM15
+       default:
+       //default is to power off all FSM's
+            begin
+        power0  = 0; 
+        power1  = 0; 
+        power2  = 0; 
+        power3  = 0; 
+        power4  = 0; 
+        power5  = 0; 
+        power6  = 0; 
+        power7  = 0; 
+        power8  = 0; 
+        power9  = 0; 
+        power10 = 0; 
+        power11 = 0; 
+        power12 = 0; 
+        power13 = 0; 
+        power14 = 0; 
+        power15 = 0;
+            end
+       endcase
 end
 
 endmodule

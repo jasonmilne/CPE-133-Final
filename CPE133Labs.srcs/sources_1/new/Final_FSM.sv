@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Final_FSM(
+module Final_FSM( //this module might not be needed
     input switches,
     input check,
     input clk,//the clock might not be needed
@@ -48,9 +48,9 @@ module Final_FSM(
     logic [3:0] o = 4'b1110;// state 15  //bit 14
     logic [3:0] p = 4'b1111;// state 16  //bit 15  
     
-    always_ff @(posedge check) //this is anyncrous with the clock it is just checking if the clock is running
-    begin
-        if (check) PS = 
+//    always_ff @(posedge check) //this is anyncrous with the clock it is just checking if the clock is running
+//    begin
+//        if (check) PS = 
     
     
     

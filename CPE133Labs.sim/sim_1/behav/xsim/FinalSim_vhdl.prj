@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../Week 8/Wend lab/given files/bc_dec.vhd" \
+"../../../../../../Week 8/Wend lab/given files/clock_div2.vhd" \
+
+# Do not sort compile order
+nosort

@@ -25,7 +25,7 @@ module RCA1(
     FA FA1 (.A(A[1]), .B(B[1]), .Ci(t1), .S(S[1]), .Co(t2));
     FA FA2 (.A(A[2]), .B(B[2]), .Ci(t2), .S(S[2]), .Co(t3));
     FA FA3 (.A(A[3]), .B(B[3]), .Ci(t3), .S(S[3]), .Co(Co));
-
+    
 
      
     

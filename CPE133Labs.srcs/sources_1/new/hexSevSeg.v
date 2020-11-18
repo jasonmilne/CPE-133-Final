@@ -31,7 +31,7 @@ module hexSevSeg(
     clk_div2 refhreshclock_generator(.clk(clk), .sclk(refreshclock)); //this divides the clock so that the discplay workds
     refreshcounter Refreshcounter_wrapper(.refresh_clock(refresh_clock), .refreshcounter(refreshcounter)); //not too sure what this does the tutorial was not that specific
     anode_control anode_control_wrapper(.refreshcounter(refreshcounter), .anode(anode)); //this controlls which anode is turned on
-    BCD_control BCD_control_wrapper(.digit1(switch[3:0]), .digit2(switch[7:4]), .digit3(switch[12:8]), .digit4(switch[15:13]), .refreshcounter(refreshcoutner), .ONE_DIGIT(ONE_DIGIT)); //this breaks the 16 bit switcehs into 4 bit numbers 
+    BCD_contorl BCD_control_wrapper(.digit1(switch[3:0]), .digit2(switch[7:4]), .digit3(switch[12:8]), .digit4(switch[15:13]), .refreshcounter(refreshcoutner), .ONE_DIGIT(ONE_DIGIT)); //this breaks the 16 bit switcehs into 4 bit numbers 
     BCD_to_Cathodes BCD_to_cathodes_wrapper(.digit(ONE_DIGIT), .cathode(cathode));//this translates bianary to "seven segement display language"
     
     

@@ -1,0 +1,37 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CPE133Labs.srcs/sources_1/new/BCD_control.v" \
+"../../../../CPE133Labs.srcs/sources_1/new/BCD_to_cathodes.v" \
+"../../../../CPE133Labs.srcs/sources_1/new/anode_control.v" \
+"../../../../CPE133Labs.srcs/sources_1/new/hexSevSeg.v" \
+"../../../../CPE133Labs.srcs/sources_1/new/refreshcounter.v" \
+
+sv xil_defaultlib  \
+"../../../../CPE133Labs.srcs/sources_1/new/Big_FSM.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/CC_MUX.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_0.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_1.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_10.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_11.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_12.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_13.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_14.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_15.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_2.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_3.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_4.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_5.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_6.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_7.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_8.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_9.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/FinalProject.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/Mux.sv" \
+"../../../../CPE133Labs.srcs/sources_1/new/counter.sv" \
+"../../../../CPE133Labs.srcs/sim_1/new/FinalSim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
