@@ -34,18 +34,27 @@ module FinalSim(
     always
     begin
     clk = 1;
-    #5
+    #1
     clk = 0;
-    #5;
+    #1;
     end
     
     
     
     initial
-    begin
-    switches = 15'b1010110011011100; check = 0; reset = 1;
-    #5
-    switches = 15'b1010110011011100; check = 1; reset = 0;
+    begin 
+    switches = 15'b0011101100111010; check = 0; reset = 1;
+    #40
+    switches = 15'b0011101100111010; check = 1; reset = 0;
+    #40
+    switches = 15'b0011101100111010; check = 0; reset = 0;
+    #40
+    switches = 15'b1010110011011101; check = 1; reset = 0;
+    #40
+    switches = 15'b1010110011011101; check = 0; reset = 1;
+    #40
+    switches = 15'b1010110011011101; check = 1; reset = 0;
+
     end
     
     

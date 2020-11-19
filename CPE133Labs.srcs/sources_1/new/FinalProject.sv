@@ -15,21 +15,26 @@
 
 module FinalProject(
     input [15:0]switches, //the input switches
+    //FOR DEBUG USE can not out check 
     input check, //button to check if the answer is correct
     input reset, //this is reset/start
     input clk, //this is the clock
     output [7:0]ssegs, //this is the final output to the seven seg display
-    output [3:0]an //this is the final an to the seven seg display
+    output [3:0]an, //this is the final an to the seven seg display
+    output [15:0]LEDS
     );
     logic cc; //this is the bit to decide crap or cool
-    logic [3:0]randNum; //this is the random number that will be used as a lookup number for all of the differnt parts 
+    //can manually set randnum in the line below For testing purposes only
+    logic [3:0]randNum = 0; //this is the random number that will be used as a lookup number for all of the differnt parts 
    // logic [3:0]randNum;
     logic [7:0]hexsseg; //this is the sseg for the hex number
     logic [7:0] ccsseg; //this is the crap / cool hex "number"
     logic [3:0] ccan; //this is the an for the crap/ cool
     logic [3:0] hexan; //this is the an for the hex
     logic s_clk; //this is the segmenmted clock that is used for crap/ cool sseg
-    logic [15:0] randumNumberDecimal;//this is from the random number generator but has been translated from the table
+    logic [15:0] randomNumberDecimal;//this is from the random number generator but has been translated from the table
+    
+   // logic check = 1; //FOR DEBUG USE ONLY
     
     //the powerx below are there to turn on each FSM when it's randum number is called. They are all either 0 for off or 1 for on
     logic power0;  //powers on  FSM 0
@@ -66,10 +71,13 @@ module FinalProject(
     logic cc14;    //cc output for FSM 14
     logic cc15;    //cc output for FSM 15
 
- 
     
-    counter RngCounter(.clk(clk), .start(reset), .randNum(randNum)); //This is the Random Number Generator that generates a number that is used to decide which test case is used. It uses a ripple carry adder to do the math and it just keeps looping
-   
+    //removing the random number generator for testing
+
+    //counter RngCounter(.clk(clk), .start(reset), .randNum(randNum)); //This is the Random Number Generator that generates a number that is used to decide which test case is used. It uses a ripple carry adder to do the math and it just keeps looping
+    clk_div2 clock_divider(.CLK(CLK), .sclk(s_clk));
+    randNumTable RandNumterToDecimal(.randNum(randNum), .RandNumberDecimal(randomNumberDecimal), .reset(reset));
+
    //this block is taking in the RandNum and powering on a FSM
      Big_FSM Big_FSM(.switches(switches), .check(check) , .randNum(randNum),
          .power0(power0), .power1(power1), .power2(power2), .power3(power3), .power4(power4), .power5(power5), .power6(power6),
@@ -78,7 +86,7 @@ module FinalProject(
      
      //for testing purposes all cases are going to be the same. They are a direct copy and paste
      //TODO Change the FSM's to be differnt and fill out the table that is in the word docs
-     FSM_Case_0 FSM_Case_0(.switches(switches),   .power(power0),  .clk(clk), .check(check), .cc(cc0));  //This is FSM 0
+     FSM_Case_0 FSM_Case_0(.switches(switches),   .power(power0),  .clk(clk), .check(check), .cc(cc0), .led(LEDS));  //This is FSM 0 leds is for debug use only
      FSM_Case_1 FSM_Case_1(.switches(switches),   .power(power1),  .clk(clk), .check(check), .cc(cc1));  //This is FSM 1
      FSM_Case_2 FSM_Case_2(.switches(switches),   .power(power2),  .clk(clk), .check(check), .cc(cc2));  //This is FSM 2
      FSM_Case_3 FSM_Case_3(.switches(switches),   .power(power3),  .clk(clk), .check(check), .cc(cc3));  //This is FSM 3
@@ -101,11 +109,14 @@ module FinalProject(
          .power13(power13), .power14(power14), .power15(power15),
          .cc0(cc0), .cc1(cc1), .cc2(cc2), .cc3(cc3), .cc4(cc4), .cc5(cc5), .cc6(cc6) ,.cc7(cc7), .cc8(cc8), .cc9(cc9), .cc10(cc10),
          .cc11(cc11), .cc12(cc12), .cc13(cc13), .cc14(cc14), .cc15(cc15));
-
-    BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ccseg), .DISP_EN(ccan)); //This is the seven segement display generator to display if Crap or Cool is displayed
-    hexSevSeg HexSseg(.clk(clk), .switch(randumNumberDecimal), .anode(hexan), .cathode(hexsseg));// This is a seven segemnt display module that was taken and modified from a Youtube tutorial
-    Mux #(7) ssegMux(.A(ccseg), .B(hexsseg), .sel(check), .out(ssegs)); //this is a mux to decide which sseg to display
-    Mux #(3) anMux(.A(ccan), .B(hexan), .sel(check), .out(an)); //this is a mux to decide which an to send to the seven segemtn display
+    BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ssegs), .DISP_EN(an));  //FOR DEBUG ONLY this line bypases the Mux's below AND ONLY TALES THE RESPONSE FROM FSM_CASE_0
+  //  BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ccseg), .DISP_EN(ccan)); //This is the seven segement display generator to display if Crap or Cool is displayed
+    hexSevSeg HexSseg(.clk(clk), .switch(randomNumberDecimal), .anode(hexan), .cathode(hexsseg));// This is a seven segemnt display module that was taken and modified from a Youtube tutorial
+ 
+ //the two muxes are not being used. Am testing something manually now
+ 
+ //   Mux #(7) ssegMux(.A(ccseg), .B(hexsseg), .sel(check), .out(ssegs)); //this is a mux to decide which sseg to display
+ //   Mux #(3) anMux(.A(ccan), .B(hexan), .sel(check), .out(an)); //this is a mux to decide which an to send to the seven segemtn display
     
     
     

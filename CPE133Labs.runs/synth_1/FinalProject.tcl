@@ -71,10 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/bothe/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16964-thicc-lad/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -110,8 +107,7 @@ read_verilog -library xil_defaultlib -sv {
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_7.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_8.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_9.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Mux.sv}
-  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/counter.sv}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/randNumTable.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FinalProject.sv}
 }
 read_verilog -library xil_defaultlib {

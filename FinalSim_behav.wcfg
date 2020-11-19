@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FinalSim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FinalSim" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="94564fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
+      <ValueColumnWidth column_width="117"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/FinalSim/switches" type="array">
+      <obj_property name="ElementShortName">switches[15:0]</obj_property>
+      <obj_property name="ObjectShortName">switches[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/check" type="logic">
+      <obj_property name="ElementShortName">check</obj_property>
+      <obj_property name="ObjectShortName">check</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/ssegs" type="array">
+      <obj_property name="ElementShortName">ssegs[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ssegs[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/an" type="array">
+      <obj_property name="ElementShortName">an[3:0]</obj_property>
+      <obj_property name="ObjectShortName">an[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/Labl_inst/cc0" type="logic">
+      <obj_property name="ElementShortName">cc0</obj_property>
+      <obj_property name="ObjectShortName">cc0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FinalSim/Labl_inst/LEDS" type="array">
+      <obj_property name="ElementShortName">LEDS[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LEDS[15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

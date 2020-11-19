@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Tue Nov 17 18:21:01 2020
+| Date         : Thu Nov 19 11:50:54 2020
 | Host         : thicc-lad running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file FinalProject_timing_summary_routed.rpt -pb FinalProject_timing_summary_routed.pb -rpx FinalProject_timing_summary_routed.rpx -warn_on_violation
 | Design       : FinalProject
@@ -39,12 +39,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (0)
+1. checking no_clock (175)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (0)
-5. checking no_input_delay (0)
-6. checking no_output_delay (0)
+4. checking unconstrained_internal_endpoints (98)
+5. checking no_input_delay (17)
+6. checking no_output_delay (26)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -52,9 +52,51 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (0)
-------------------------
- There are 0 register/latch pins with no clock.
+1. checking no_clock (175)
+--------------------------
+ There are 38 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[10] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[11] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[12] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[13] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[14] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[15] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[1] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[2] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[3] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[4] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[5] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[6] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[7] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[8] (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: switches[9] (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: FSM_Case_0/FSM_sequential_PS_reg[0]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: FSM_Case_0/FSM_sequential_PS_reg[1]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: FSM_Case_0/FSM_sequential_PS_reg[2]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: FSM_Case_0/FSM_sequential_PS_reg[3]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: FSM_Case_0/FSM_sequential_PS_reg[4]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: ccSseg/my_clk/tmp_clk_reg/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -67,23 +109,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (0)
-------------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+4. checking unconstrained_internal_endpoints (98)
+-------------------------------------------------
+ There are 98 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (0)
-------------------------------
- There are 0 input ports with no input delay specified.
+5. checking no_input_delay (17)
+-------------------------------
+ There are 17 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (0)
--------------------------------
- There are 0 ports with no output delay specified.
+6. checking no_output_delay (26)
+--------------------------------
+ There are 26 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

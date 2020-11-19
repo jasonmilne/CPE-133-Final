@@ -33,10 +33,27 @@ module Big_FSM( //I think that this is not needed
     output logic power14, //powers on FSM 14
     output logic power15  //powers on FSM 15
     );
+
     always_comb
     begin
+        power0  = 0; //intinlaize all powers to be off
+        power1  = 0; 
+        power2  = 0; 
+        power3  = 0; 
+        power4  = 0; 
+        power5  = 0; 
+        power6  = 0; 
+        power7  = 0; 
+        power8  = 0; 
+        power9  = 0; 
+        power10 = 0; 
+        power11 = 0; 
+        power12 = 0; 
+        power13 = 0; 
+        power14 = 0; 
+        power15 = 0;
     case(randNum)
-       0: power0   = 0; //power on FSM0
+       0: power0   = 1; //power on FSM0
        1: power1   = 1; //power on FSM1
        2: power2   = 1; //power on FSM2
        3: power3   = 1; //power on FSM3
