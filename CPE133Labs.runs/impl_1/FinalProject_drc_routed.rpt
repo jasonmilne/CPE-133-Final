@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Thu Nov 19 11:50:53 2020
+| Date         : Thu Nov 19 12:37:46 2020
 | Host         : thicc-lad running 64-bit major release  (build 9200)
 | Command      : report_drc -file FinalProject_drc_routed.rpt -pb FinalProject_drc_routed.pb -rpx FinalProject_drc_routed.rpx
 | Design       : FinalProject
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 19
+             Violations found: 18
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 18         |
+| PDRC-153 | Warning  | Gated clock check                                   | 17         |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -54,85 +54,80 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net FSM_Case_0/cc_reg_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/cc_reg_i_2/O, cell FSM_Case_0/cc_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[0]_i_2/O, cell FSM_Case_0/led_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[0]_i_2/O, cell FSM_Case_0/led_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[10]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[10]_i_2/O, cell FSM_Case_0/led_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[10]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[10]_i_2/O, cell FSM_Case_0/led_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[11]_i_2/O, cell FSM_Case_0/led_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[11]_i_2/O, cell FSM_Case_0/led_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[12]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[12]_i_2/O, cell FSM_Case_0/led_reg[12]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[12]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[12]_i_2/O, cell FSM_Case_0/led_reg[12]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[13]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[13]_i_2/O, cell FSM_Case_0/led_reg[13]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[13]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[13]_i_2/O, cell FSM_Case_0/led_reg[13]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[14]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[14]_i_2/O, cell FSM_Case_0/led_reg[14]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[14]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[14]_i_2/O, cell FSM_Case_0/led_reg[14]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[15]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[15]_i_2/O, cell FSM_Case_0/led_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[15]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[15]_i_2/O, cell FSM_Case_0/led_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[1]_i_2/O, cell FSM_Case_0/led_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[1]_i_2/O, cell FSM_Case_0/led_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[2]_i_2/O, cell FSM_Case_0/led_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[2]_i_2/O, cell FSM_Case_0/led_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[3]_i_2/O, cell FSM_Case_0/led_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[3]_i_2/O, cell FSM_Case_0/led_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[4]_i_2/O, cell FSM_Case_0/led_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[4]_i_2/O, cell FSM_Case_0/led_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[5]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[5]_i_2/O, cell FSM_Case_0/led_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[5]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[5]_i_2/O, cell FSM_Case_0/led_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[6]_i_2/O, cell FSM_Case_0/led_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[6]_i_2/O, cell FSM_Case_0/led_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FSM_Case_0/led_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[7]_i_2/O, cell FSM_Case_0/led_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net FSM_Case_0/led_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[7]_i_2/O, cell FSM_Case_0/led_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#17 Warning
-Gated clock check  
 Net FSM_Case_0/led_reg[8]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[8]_i_2/O, cell FSM_Case_0/led_reg[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#18 Warning
+PDRC-153#17 Warning
 Gated clock check  
 Net FSM_Case_0/led_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_Case_0/led_reg[9]_i_2/O, cell FSM_Case_0/led_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

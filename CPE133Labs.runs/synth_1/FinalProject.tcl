@@ -107,6 +107,7 @@ read_verilog -library xil_defaultlib -sv {
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_7.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_8.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FSM_Case_9.sv}
+  {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/Mux.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/randNumTable.sv}
   {C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.srcs/sources_1/new/FinalProject.sv}
 }

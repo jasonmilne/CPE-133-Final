@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Thu Nov 19 11:50:36 2020
+| Date         : Thu Nov 19 12:37:30 2020
 | Host         : thicc-lad running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file FinalProject_control_sets_placed.rpt
 | Design       : FinalProject
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    22 |
-|    Minimum number of control sets                        |    22 |
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   138 |
+| Unused register locations in slices containing registers |   131 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    22 |
-| >= 0 to < 4        |    19 |
+| Total control sets |    21 |
+| >= 0 to < 4        |    18 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              26 |           21 |
+| No           | No                    | No                     |              25 |           21 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              36 |           10 |
+| No           | Yes                   | No                     |              36 |           11 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -76,24 +76,23 @@ Table of Contents
 |  FSM_Case_0/led_reg[0]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
 |  FSM_Case_0/led_reg[10]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
 |  FSM_Case_0/led_reg[11]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/cc_reg_i_2_n_0                   |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[12]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
 |  FSM_Case_0/led_reg[15]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[14]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[13]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[1]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
 |  FSM_Case_0/led_reg[2]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[3]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[4]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[9]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[8]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[6]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  FSM_Case_0/led_reg[5]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
 |  FSM_Case_0/led_reg[7]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
-|  ccSseg/my_clk/CLK                           |               |                       |                1 |              2 |         2.00 |
+|  FSM_Case_0/led_reg[14]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[1]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[6]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[8]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[4]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[5]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[9]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[12]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[13]_i_2_n_0              |               |                       |                1 |              1 |         1.00 |
+|  FSM_Case_0/led_reg[3]_i_2_n_0               |               |                       |                1 |              1 |         1.00 |
 |  clk_IBUF_BUFG                               |               |                       |                1 |              2 |         2.00 |
-|  FSM_Case_0/FSM_sequential_NS_reg[4]_i_2_n_0 |               |                       |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG                               |               | check_IBUF            |                2 |              5 |         2.50 |
+|  ccSseg/my_clk/CLK                           |               |                       |                1 |              2 |         2.00 |
+|  FSM_Case_0/FSM_sequential_NS_reg[4]_i_2_n_0 |               |                       |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                               |               | check_IBUF            |                3 |              5 |         1.67 |
 |  clk_IBUF_BUFG                               |               | ccSseg/my_clk/tmp_clk |                8 |             31 |         3.88 |
 +----------------------------------------------+---------------+-----------------------+------------------+----------------+--------------+
 

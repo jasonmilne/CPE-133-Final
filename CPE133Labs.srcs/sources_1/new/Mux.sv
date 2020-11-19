@@ -23,19 +23,24 @@
 module Mux #(parameter WIDTH = 3)(
     input[WIDTH:0] A,
     input [WIDTH:0]B,
-    input sel,
+    input sel1,
+    input sel2,
     output logic[WIDTH:0] out 
     );
     always_comb
     begin
     
-    if(sel == 1) 
+    if(sel1 == 1) 
         begin
             out = A;
         end
-    else //if(sel == 0)
+    else if (sel2 == 1) //this dispalys 
         begin
             out = B;
         end
+    else //no buttons are pushed;
+    begin
+    out = 0;
+    end
     end
 endmodule
