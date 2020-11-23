@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: TODO
+//              THIS TEST CASE IS FOR: 38C6
 // Dependencies: 
 // 
 // Revision:
@@ -111,7 +111,7 @@ module FSM_Case_4(
             led[13] = 0;
             led[14] = 0;
             led[15] = 0;
-            if(switches[0] == 1) //this is the correct position
+            if(switches[0] == 0) //this is the correct position
                 begin
                 led[0] = 1;
                     NS = b;
@@ -149,7 +149,7 @@ module FSM_Case_4(
        end
         d:// this is checking if the forth bit is correct
         begin
-            if(switches[3] == 0) //this is the correct position
+            if(switches[3] == 1) //this is the correct position
                 begin
                     led [3] = 1;
                     NS = e;
@@ -176,7 +176,7 @@ module FSM_Case_4(
         f:// this is checking if the sixth bit is correct
         
         begin
-            if(switches[5] == 1) //this is the correct position
+            if(switches[5] == 0) //this is the correct position
                 begin
                     led [5] = 1;
                     NS = g;
@@ -255,7 +255,7 @@ module FSM_Case_4(
        end
         L:// this is checking if the 12 bit is correct
         begin
-            if(switches[11] == 1) //this is the correct position
+            if(switches[11] == 0) //this is the correct position
                 begin
                     led[11] = 1;
                     NS = m;
@@ -268,7 +268,7 @@ module FSM_Case_4(
        end
         m:// this is checking if the 13 bit is correct
         begin
-            if(switches[12] == 1) //this is the correct position
+            if(switches[12] == 0) //this is the correct position
                 begin
                     led[12] = 1;
                     NS = n;
@@ -294,7 +294,7 @@ module FSM_Case_4(
        end      
          o:// this is checking if the 15 bit is correct
         begin
-            if(switches[14] == 0) //this is the correct position
+            if(switches[14] == 1) //this is the correct position
                 begin
                     led[14] = 1;
                     NS = p;
