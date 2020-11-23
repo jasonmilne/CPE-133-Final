@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: TODO
+//              THIS TEST CASE IS FOR: 0C45
 // Dependencies: 
 // 
 // Revision:
@@ -111,7 +111,7 @@ module FSM_Case_3(
             led[13] = 0;
             led[14] = 0;
             led[15] = 0;
-            if(switches[0] == 1) //this is the correct position
+            if(switches[0] == 0) //this is the correct position
                 begin
                 led[0] = 1;
                     NS = b;
@@ -136,7 +136,7 @@ module FSM_Case_3(
        end
         c:// this is checking if the thrid bit is correct
         begin
-            if(switches[2] == 1) //this is the correct position
+            if(switches[2] == 0) //this is the correct position
                 begin
                     led [2] = 1;
                     NS = d;
@@ -215,7 +215,7 @@ module FSM_Case_3(
        end
         i:// this is checking if the ninth bit is correct
         begin
-            if(switches[8] == 1) //this is the correct position
+            if(switches[8] == 0) //this is the correct position
                 begin
                     led[8] = 1;
                     NS = j;
@@ -268,7 +268,7 @@ module FSM_Case_3(
        end
         m:// this is checking if the 13 bit is correct
         begin
-            if(switches[12] == 1) //this is the correct position
+            if(switches[12] == 0) //this is the correct position
                 begin
                     led[12] = 1;
                     NS = n;
