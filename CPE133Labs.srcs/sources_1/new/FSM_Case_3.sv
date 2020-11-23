@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: TODO
+//              THIS TEST CASE IS FOR: OC54: 0000 1100 1010 0100
 // Dependencies: 
 // 
 // Revision:
@@ -111,7 +111,8 @@ module FSM_Case_3(
             led[13] = 0;
             led[14] = 0;
             led[15] = 0;
-            if(switches[0] == 1) //this is the correct position
+            cc = 0;
+            if(switches[0] == 0) //this is the correct position
                 begin
                 led[0] = 1;
                     NS = b;
@@ -162,7 +163,7 @@ module FSM_Case_3(
        end
         e:// this is checking if the fifth bit is correct
         begin
-            if(switches[4] == 1) //this is the correct position
+            if(switches[4] == 0) //this is the correct position
                 begin
                     led [4] = 1;
                     NS = f;
@@ -202,7 +203,7 @@ module FSM_Case_3(
        end
         h:// this is checking if the eight bit is correct
         begin
-            if(switches[7] == 0) //this is the correct position
+            if(switches[7] == 1) //this is the correct position
                 begin
                     led[7] = 1;
                     NS = i;
@@ -215,7 +216,7 @@ module FSM_Case_3(
        end
         i:// this is checking if the ninth bit is correct
         begin
-            if(switches[8] == 1) //this is the correct position
+            if(switches[8] == 0) //this is the correct position
                 begin
                     led[8] = 1;
                     NS = j;
@@ -228,7 +229,7 @@ module FSM_Case_3(
        end
         j:// this is checking if the tenth bit is correct
         begin
-            if(switches[9] == 1) //this is the correct position
+            if(switches[9] == 0) //this is the correct position
                 begin
                 led[9] = 1;
                     NS = k;
@@ -242,7 +243,7 @@ module FSM_Case_3(
        end
         k:// this is checking if the 11 bit is correct
         begin
-            if(switches[10] == 0) //this is the correct position
+            if(switches[10] == 1) //this is the correct position
                 begin
                     led[10] = 1;
                     NS = L; //this is the letter l not the number 1
@@ -268,7 +269,7 @@ module FSM_Case_3(
        end
         m:// this is checking if the 13 bit is correct
         begin
-            if(switches[12] == 1) //this is the correct position
+            if(switches[12] == 0) //this is the correct position
                 begin
                     led[12] = 1;
                     NS = n;
@@ -281,7 +282,7 @@ module FSM_Case_3(
        end      
        n:// this is checking if the 14  bit is correct
         begin
-            if(switches[13] == 1) //this is the correct position
+            if(switches[13] == 0) //this is the correct position
                 begin
                 led[13] = 1;
                     NS = o;

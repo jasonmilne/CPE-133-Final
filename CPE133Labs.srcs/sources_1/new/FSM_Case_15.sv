@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: ACDC TODO
+//              THIS TEST CASE IS FOR: 7A67 : 0111 1010 0110 0111
 // Dependencies: 
 // 
 // Revision:
@@ -111,6 +111,7 @@ module FSM_Case_15(
             led[13] = 0;
             led[14] = 0;
             led[15] = 0;
+            cc = 0;
             if(switches[0] == 1) //this is the correct position
                 begin
                 led[0] = 1;
@@ -123,7 +124,7 @@ module FSM_Case_15(
        end
         b:// this is checking if the second bit is correct
         begin
-            if(switches[1] == 0) //this is the correct position 
+            if(switches[1] == 1) //this is the correct position 
                 begin
                 led[1] = 1;
                     NS = c;
@@ -162,7 +163,7 @@ module FSM_Case_15(
        end
         e:// this is checking if the fifth bit is correct
         begin
-            if(switches[4] == 1) //this is the correct position
+            if(switches[4] == 0) //this is the correct position
                 begin
                     led [4] = 1;
                     NS = f;
@@ -189,7 +190,7 @@ module FSM_Case_15(
        end
         g:// this is checking if the seventh bit is correct
         begin
-            if(switches[6] == 0) //this is the correct position
+            if(switches[6] == 1) //this is the correct position
                 begin
                     led[6] = 1;
                     NS = h;
@@ -215,7 +216,7 @@ module FSM_Case_15(
        end
         i:// this is checking if the ninth bit is correct
         begin
-            if(switches[8] == 1) //this is the correct position
+            if(switches[8] == 0) //this is the correct position
                 begin
                     led[8] = 1;
                     NS = j;
@@ -294,7 +295,7 @@ module FSM_Case_15(
        end      
          o:// this is checking if the 15 bit is correct
         begin
-            if(switches[14] == 0) //this is the correct position
+            if(switches[14] == 1) //this is the correct position
                 begin
                     led[14] = 1;
                     NS = p;

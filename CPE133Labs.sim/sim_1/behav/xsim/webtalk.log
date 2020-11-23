@@ -2,8 +2,8 @@
 # Webtalk v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Wed Nov 18 19:04:54 2020
-# Process ID: 12072
+# Start of session at: Sun Nov 22 10:52:02 2020
+# Process ID: 4748
 # Current directory: C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.sim/sim_1/behav/xsim/xsim.dir/FinalSim_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/bothe/Nextcloud/Cal poly/Fall 2020/CPE 133/Vidado/CPE133Labs/CPE133Labs.sim/sim_1/behav/xsim/webtalk.log
@@ -11,4 +11,4 @@
 #-----------------------------------------------------------
 source C:/Users/bothe/Nextcloud/Cal -notrace
 couldn't read file "C:/Users/bothe/Nextcloud/Cal": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Wed Nov 18 19:04:54 2020...
+INFO: [Common 17-206] Exiting Webtalk at Sun Nov 22 10:52:02 2020...

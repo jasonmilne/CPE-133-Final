@@ -19,21 +19,22 @@ input [3:0] digit1,//right digit
 input [3:0] digit2, //middle right digit
 input [3:0] digit3, //middle left digit
 input [3:0] digit4,  // left digit
-input [1:0] refreshcounter,
-output reg [3:0] ONE_DIGIT = 0 //chooses which digit is going to be displayed for that part
+input [1:0] refreshcounter, //the "clock" for this part
+input clock, //might not be needed
+output reg [3:0] ONE_DIGIT //chooses which digit is going to be displayed for that part
 );
 
 always@(refreshcounter)
 begin
     case(refreshcounter)
-        2'd0:
-            ONE_DIGIT = digit1; //digit 1 ON (right most)
-        2'd1: 
-            ONE_DIGIT = digit2; //digit 2  ON
-        2'd2:
-            ONE_DIGIT = digit3; //digit 3 ON
-        2'd3:
-            ONE_DIGIT = digit4; //digit 3 ON (left most)
+        2'b00:
+            ONE_DIGIT = digit4; //digit 1 ON (right most)
+        2'b01: 
+            ONE_DIGIT = digit3; //digit 2  ON
+        2'b10:
+            ONE_DIGIT = digit2; //digit 3 ON
+        2'b11:
+            ONE_DIGIT = digit1; //digit 4 ON (left most)
          endcase
 end
 

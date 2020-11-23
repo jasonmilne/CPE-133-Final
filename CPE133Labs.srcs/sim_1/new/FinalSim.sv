@@ -44,6 +44,8 @@ module FinalSim(
     initial
     begin 
     switches = 15'b0011101100111010; check = 0; reset = 1;
+
+    switches = 15'b0011101100111010; check = 0; reset = 1;
     #40
     switches = 15'b0011101100111010; check = 1; reset = 0;
     #40
@@ -162,9 +164,7 @@ module FinalSim(
     switches = 15'b0111101001100111; check = 1;
     #40
     check = 0; reset = 1;
-    #40
     
-
     end
     
     

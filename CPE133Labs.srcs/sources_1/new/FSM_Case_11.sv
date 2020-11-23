@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: TODO
+//              THIS TEST CASE IS FOR: 8B71 : 1000 1011 0111 0001
 // Dependencies: 
 // 
 // Revision:
@@ -111,6 +111,7 @@ module FSM_Case_11(
             led[13] = 0;
             led[14] = 0;
             led[15] = 0;
+            cc = 0;
             if(switches[0] == 1) //this is the correct position
                 begin
                 led[0] = 1;
@@ -136,7 +137,7 @@ module FSM_Case_11(
        end
         c:// this is checking if the thrid bit is correct
         begin
-            if(switches[2] == 1) //this is the correct position
+            if(switches[2] == 0) //this is the correct position
                 begin
                     led [2] = 1;
                     NS = d;
@@ -189,7 +190,7 @@ module FSM_Case_11(
        end
         g:// this is checking if the seventh bit is correct
         begin
-            if(switches[6] == 0) //this is the correct position
+            if(switches[6] == 1) //this is the correct position
                 begin
                     led[6] = 1;
                     NS = h;
@@ -268,7 +269,7 @@ module FSM_Case_11(
        end
         m:// this is checking if the 13 bit is correct
         begin
-            if(switches[12] == 1) //this is the correct position
+            if(switches[12] == 0) //this is the correct position
                 begin
                     led[12] = 1;
                     NS = n;
@@ -281,7 +282,7 @@ module FSM_Case_11(
        end      
        n:// this is checking if the 14  bit is correct
         begin
-            if(switches[13] == 1) //this is the correct position
+            if(switches[13] == 0) //this is the correct position
                 begin
                 led[13] = 1;
                     NS = o;
@@ -307,7 +308,7 @@ module FSM_Case_11(
        end
         p:// this is checking if the 16 bit is correct
         begin
-            if(switches[15] == 0) //this is the correct position
+            if(switches[15] == 1) //this is the correct position
                 begin
                     led[15] = 1;
                     NS = DONE; // I do not think that 

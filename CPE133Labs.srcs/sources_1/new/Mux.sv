@@ -32,15 +32,16 @@ module Mux #(parameter WIDTH = 3)(
     
     if(sel1 == 1) 
         begin
-            out = A;
-        end
-    else if (sel2 == 1) //this dispalys 
-        begin
             out = B;
         end
-    else //no buttons are pushed;
+//    else if (sel2 == 1) //this dispalys 
+//        begin
+//            out = B;
+//        end
+    else //no buttons are pushed; //trying to bypass the button to see if it fixes the problem
     begin
-    out = 0;
+    
+    out = A;
     end
     end
 endmodule

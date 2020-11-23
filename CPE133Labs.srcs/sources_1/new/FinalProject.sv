@@ -26,9 +26,14 @@ module FinalProject(
     output [15:0]LEDS
     );
     logic cc; //this is the bit to decide crap or cool
+    
+    
     //can manually set randnum in the line below For testing purposes only
-    //logic [3:0]randNum = 0; //this is the random number that will be used as a lookup number for all of the differnt parts 
-    logic [3:0]randNum; //This is the random number that the counter generates
+    logic [3:0]randNum = 4'b1010; //this is the random number that will be used as a lookup number for all of the differnt parts 
+    
+    
+    
+    //logic [3:0]randNum; //This is the random number that the counter generates
     logic [7:0]hexsseg; //this is the sseg for the hex number
     logic [7:0] ccsseg; //this is the crap / cool hex "number"
     logic [3:0] ccan; //this is the an for the crap/ cool
@@ -111,13 +116,17 @@ module FinalProject(
          .power13(power13), .power14(power14), .power15(power15),
          .cc0(cc0), .cc1(cc1), .cc2(cc2), .cc3(cc3), .cc4(cc4), .cc5(cc5), .cc6(cc6) ,.cc7(cc7), .cc8(cc8), .cc9(cc9), .cc10(cc10),
          .cc11(cc11), .cc12(cc12), .cc13(cc13), .cc14(cc14), .cc15(cc15));
-   // BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ssegs), .DISP_EN(an));  //FOR DEBUG ONLY this line bypases the Mux's below AND ONLY TALES THE RESPONSE FROM FSM_CASE_0
-    BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ccseg), .DISP_EN(ccan)); //This is the seven segement display generator to display if Crap or Cool is displayed
+         //the noted out Block below is for testing purpose only
+    //BC_DEC ccSsegttest(.CLK(clk), .Z(cc), .SEGMENTS(ssegs), .DISP_EN(an));  //FOR DEBUG ONLY this line bypases the Mux's below AND ONLY TALES THE RESPONSE FROM FSM_CASE_0
+   //hexSevSeg HexSseg(.clk(clk), .anode(an), .cathode(ssegs)); //this one is for manually controlling the "randomNumberDecimal" that is in the module below
+    //hexSevSeg HexSseg(.clk(clk), .switch(randomNumberDecimal), .anode(an), .cathode(ssegs)); //FOR DEBUG USE ONLY this manually overrides the Mux's below
+
+
+    // if the two muxes are not being used. I Am testing something manually 
+    BC_DEC ccSseg(.CLK(clk), .Z(cc), .SEGMENTS(ccsseg), .DISP_EN(ccan)); //This is the seven segement display generator to display if Crap or Cool is displayed
     hexSevSeg HexSseg(.clk(clk), .switch(randomNumberDecimal), .anode(hexan), .cathode(hexsseg));// This is a seven segemnt display module that was taken and modified from a Youtube tutorial
- 
- //the two muxes are not being used. Am testing something manually now
- 
-    Mux #(7) ssegMux(.A(ccseg), .B(hexsseg), .sel1(displaycc), .sel2(displayHex), .out(ssegs)); //this is a mux to decide which sseg to display
+
+    Mux #(7) ssegMux(.A(ccsseg), .B(hexsseg), .sel1(displaycc), .sel2(displayHex), .out(ssegs)); //this is a mux to decide which sseg to display
     Mux #(3) anMux(.A(ccan), .B(hexan), .sel1(displaycc), .sel2(displayHex), .out(an)); //this is a mux to decide which an to send to the seven segemtn display
     
     

@@ -29,15 +29,15 @@ module randNumTable(
     always_ff @(posedge reset)
     begin
     case (randNum)
-    0: //This is the random number for ACDC
+    4'b0000: //This is the random number for ACDC
     begin
     RandNumberDecimal = 16'b1010110011011100;
     end
-     1: //This is the random number for B244
+     4'b0001: //This is the random number for B244
     begin
     RandNumberDecimal = 16'b1011001001000100;
     end
-     2: //This is the random number for 0047
+     4'b0010: //This is the random number for 0047
     begin
     RandNumberDecimal = 16'b0000000001000111;
     end

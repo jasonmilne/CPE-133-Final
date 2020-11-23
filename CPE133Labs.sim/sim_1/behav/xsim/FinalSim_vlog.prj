@@ -4,6 +4,7 @@ verilog xil_defaultlib  \
 "../../../../CPE133Labs.srcs/sources_1/new/BCD_to_cathodes.v" \
 "../../../../CPE133Labs.srcs/sources_1/new/anode_control.v" \
 "../../../../CPE133Labs.srcs/sources_1/new/hexSevSeg.v" \
+"../../../../CPE133Labs.srcs/sources_1/new/other_clock_devider.v" \
 "../../../../CPE133Labs.srcs/sources_1/new/refreshcounter.v" \
 
 sv xil_defaultlib  \
@@ -26,7 +27,6 @@ sv xil_defaultlib  \
 "../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_8.sv" \
 "../../../../CPE133Labs.srcs/sources_1/new/FSM_Case_9.sv" \
 "../../../../CPE133Labs.srcs/sources_1/new/FinalProject.sv" \
-"../../../../CPE133Labs.srcs/sources_1/new/counter.sv" \
 "../../../../CPE133Labs.srcs/sources_1/new/randNumTable.sv" \
 "../../../../CPE133Labs.srcs/sim_1/new/FinalSim.sv" \
 

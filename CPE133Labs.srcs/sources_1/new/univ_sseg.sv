@@ -24,7 +24,7 @@
 //-    dp_en:   if dp_oe = 0, no decimal point is displayed 
 //-             if dp_oe = 1, displays one dp according to dp_sel inputs
 //-      
-//-    dp_sel:  if dp = 00, dp displayed on right-most 7-seg display
+//-    dp_sel:  if dp = 00, dp displayed on right-most 7-seg display //I can take the input from this
 //-             if dp = 01, dp displayed on middle-right 7-seg display
 //-             if dp = 10, dp displayed on middle-left 7-seg display
 //-             if dp = 11, dp displayed on left-most 7-seg display

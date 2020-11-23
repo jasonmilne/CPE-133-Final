@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1956000fs"></ZoomStartTime>
-      <ZoomEndTime time="1964401fs"></ZoomEndTime>
-      <Cursor1Time time="78000fs"></Cursor1Time>
+      <ZoomStartTime time="990752fs"></ZoomStartTime>
+      <ZoomEndTime time="1000001fs"></ZoomEndTime>
+      <Cursor1Time time="992293fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="191"></NameColumnWidth>
-      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+      <ValueColumnWidth column_width="105"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/FinalSim/switches" type="array">
       <obj_property name="ElementShortName">switches[15:0]</obj_property>
       <obj_property name="ObjectShortName">switches[15:0]</obj_property>
@@ -53,9 +53,13 @@
       <obj_property name="ElementShortName">cc0</obj_property>
       <obj_property name="ObjectShortName">cc0</obj_property>
    </wvobject>
+   <wvobject fp_name="/FinalSim/Labl_inst/HexSseg/anode_control_wrapper/anode" type="array">
+      <obj_property name="ElementShortName">anode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">anode[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
    <wvobject fp_name="/FinalSim/Labl_inst/LEDS" type="array">
       <obj_property name="ElementShortName">LEDS[15:0]</obj_property>
       <obj_property name="ObjectShortName">LEDS[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>
