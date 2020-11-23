@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: TODO
+//              THIS TEST CASE IS FOR: BDCA
 // Dependencies: 
 // 
 // Revision:
@@ -149,7 +149,7 @@ module FSM_Case_6(
        end
         d:// this is checking if the forth bit is correct
         begin
-            if(switches[3] == 0) //this is the correct position
+            if(switches[3] == 1) //this is the correct position
                 begin
                     led [3] = 1;
                     NS = e;
@@ -202,7 +202,7 @@ module FSM_Case_6(
        end
         h:// this is checking if the eight bit is correct
         begin
-            if(switches[7] == 0) //this is the correct position
+            if(switches[7] == 1) //this is the correct position
                 begin
                     led[7] = 1;
                     NS = i;
@@ -255,7 +255,7 @@ module FSM_Case_6(
        end
         L:// this is checking if the 12 bit is correct
         begin
-            if(switches[11] == 1) //this is the correct position
+            if(switches[11] == 0) //this is the correct position
                 begin
                     led[11] = 1;
                     NS = m;
@@ -281,7 +281,7 @@ module FSM_Case_6(
        end      
        n:// this is checking if the 14  bit is correct
         begin
-            if(switches[13] == 1) //this is the correct position
+            if(switches[13] == 0) //this is the correct position
                 begin
                 led[13] = 1;
                     NS = o;
@@ -294,7 +294,7 @@ module FSM_Case_6(
        end      
          o:// this is checking if the 15 bit is correct
         begin
-            if(switches[14] == 0) //this is the correct position
+            if(switches[14] == 1) //this is the correct position
                 begin
                     led[14] = 1;
                     NS = p;
