@@ -112,7 +112,7 @@ module FSM_Case_4(
             led[14] = 0;
             led[15] = 0;
             cc = 0;
-            if(switches[0] == 00) //this is the correct position
+            if(switches[0] == 0) //this is the correct position
                 begin
                 led[0] = 1;
                     NS = b;
