@@ -83,7 +83,7 @@ module FinalProject(
     //if counter is noted out then it is manually controlled above for testing
     //counter RngCounter(.clk(clk), .start(reset), .randNum(randNum)); //This is the Random Number Generator that generates a number that is used to decide which test case is used. It uses a ripple carry adder to do the math and it just keeps looping
     clk_div2 clock_divider(.CLK(CLK), .sclk(s_clk));
-    counter c1(.start(start), .randNum(randNum));
+    counter c1(.start(reset), .randNum(randNum));
     randNumTable RandNumterToDecimal(.randNum(randNum), .RandNumberDecimal(randomNumberDecimal), .reset(reset));
 
    //this block is taking in the RandNum and powering on a FSM
