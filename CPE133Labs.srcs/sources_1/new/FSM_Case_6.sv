@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: BDCA : 0101 0011 1011 1011
+//              THIS TEST CASE IS FOR: BDCA : 1011 1101 1100 1010
 // Dependencies: 
 // 
 // Revision:
