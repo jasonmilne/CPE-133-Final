@@ -10,7 +10,7 @@
 // 
 //
 //
-//              THIS TEST CASE IS FOR: OC54: 0000 1100 1010 0100
+//              THIS TEST CASE IS FOR: OC54: 0000 1100 0101 0100
 // Dependencies: 
 // 
 // Revision:
@@ -163,7 +163,7 @@ module FSM_Case_3(
        end
         e:// this is checking if the fifth bit is correct
         begin
-            if(switches[4] == 0) //this is the correct position
+            if(switches[4] == 1) //this is the correct position
                 begin
                     led [4] = 1;
                     NS = f;
@@ -177,7 +177,7 @@ module FSM_Case_3(
         f:// this is checking if the sixth bit is correct
         
         begin
-            if(switches[5] == 1) //this is the correct position
+            if(switches[5] == 0) //this is the correct position
                 begin
                     led [5] = 1;
                     NS = g;
@@ -190,7 +190,7 @@ module FSM_Case_3(
        end
         g:// this is checking if the seventh bit is correct
         begin
-            if(switches[6] == 0) //this is the correct position
+            if(switches[6] == 1) //this is the correct position
                 begin
                     led[6] = 1;
                     NS = h;
@@ -203,7 +203,7 @@ module FSM_Case_3(
        end
         h:// this is checking if the eight bit is correct
         begin
-            if(switches[7] == 1) //this is the correct position
+            if(switches[7] == 0) //this is the correct position
                 begin
                     led[7] = 1;
                     NS = i;
